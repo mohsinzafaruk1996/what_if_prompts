@@ -1,0 +1,33 @@
+#canvas{
+    background-color: blue;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    width: auto !important; /*min-height hack*/
+    margin: 10px auto 10px;
+    text-align: center;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	min-height: 100%;
+	height: auto !important; /*min-height hack*/
+	height: 100%;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#button, #button_previous, #button_next{
+    text-align: center;
+    align-items: center;
+    vertical-align:middle;
+    width: 100px;
+    height: 60px;
+    margin: 10px auto 10px;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: black;
+    border-radius: 5px;
+    border-style: none;
+    display: inline-block;
+}
+
