@@ -194,14 +194,77 @@ let colors = ['Are we the most advanced form of life in the universe? Or are the
 //change the background of canvas when button is clicked
 let button = document.getElementById('button');
 
-button.addEventListener('click', function(){
-    //select a random number between 0 - 6
-    let index = parseInt((Math.random()*colors.length));
+
+let button_next = document.getElementById('button_next');
+
+let button_previous = document.getElementById('button_previous');
+
+let length = parseInt(colors.length)
+
+button_next.addEventListener('click', function(){
+    
+	var index_holder = document.getElementById('index_holder');
+	
+    var index = parseInt(index_holder.innerText);
+	index = index % length
+	index = index+1 
+	
+	var canvas = document.getElementById('canvas');
+	
+	var index_holder = document.getElementById('index_holder');
     //grab the canvas
-    let canvas = document.getElementById('canvas');
+    
 	
 	canvas.innerText = colors[index] +  "\n"   + index + " out of " + colors.length
 	
+	index_holder.innerText = index
+	
+  
+})
 
+button_previous.addEventListener('click', function(){
     
+	var index_holder = document.getElementById('index_holder');
+	
+    var index = parseInt(index_holder.innerText);
+	index = index % length
+	index = index-1 
+	
+	index = (index >= 0) ? index : length-1;
+	
+	var canvas = document.getElementById('canvas');
+	
+	var index_holder = document.getElementById('index_holder');
+    //grab the canvas
+    
+	
+	canvas.innerText = colors[index] +  "\n"   + index + " out of " + colors.length
+	
+	index_holder.innerText = index
+	
+  
+})
+
+
+
+
+
+
+
+button.addEventListener('click', function(){
+    //select a random number between 0 - 6
+    var index = parseInt((Math.random()*colors.length));
+	
+	
+	var canvas = document.getElementById('canvas');
+	
+	var index_holder = document.getElementById('index_holder');
+    //grab the canvas
+    
+	
+	canvas.innerText = colors[index] +  "\n"   + index + " out of " + colors.length
+	
+	index_holder.innerText = index
+	
+  
 })
